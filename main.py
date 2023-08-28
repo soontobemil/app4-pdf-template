@@ -11,6 +11,7 @@ for index, row in df.iterrows():
     pdf.set_text_color(100, 100, 100)
     pdf.cell(w=0, h=12, txt=row["Topic"], align="M", ln=1)
     pdf.line(10, 21, 200, 21)
-
+    for page in range(row["Pages"] - 1):
+        pdf.add_page()
 
 pdf.output("output.pdf")
