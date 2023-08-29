@@ -30,4 +30,5 @@ for index, row in df.iterrows():
         pdf.cell(w=0, h=10, txt=row["Topic"], align="R")
         for i in range(20, 290, 7):
             pdf.line(10, i, 200, i)
+
 pdf.output("output.pdf")
